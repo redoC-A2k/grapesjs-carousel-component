@@ -1,4 +1,4 @@
-import { Component, Editor } from "grapesjs";
+import {  Editor } from "grapesjs";
 import { carousel, image, slide, text } from "./consts";
 import { PluginOptions } from '.'
 // import { Splide } from "@splidejs/splide/dist/types/index.d.ts";
