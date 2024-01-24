@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const consts_1 = require("./consts");
+import { carousel, image, slide, text } from "./consts.js";
 // import { Splide } from "@splidejs/splide/dist/types/index.d.ts";
 // import Splide from '@splidejs/splide';
-exports.default = (editor, opts) => {
+export default (editor, opts) => {
     const domc = editor.DomComponents;
-    domc.addType(consts_1.image.type, {
+    domc.addType(image.type, {
         isComponent: (el) => {
             if (el.classList && el.classList.contains("slide_image")) {
-                return { type: consts_1.image.type };
+                return { type: image.type };
             }
         },
         extend: "image",
@@ -23,10 +21,10 @@ exports.default = (editor, opts) => {
             },
         }
     });
-    domc.addType(consts_1.text.type, {
+    domc.addType(text.type, {
         isComponent: (el) => {
             if (el.classList && el.classList.contains("slide_text")) {
-                return { type: consts_1.text.type };
+                return { type: text.type };
             }
         },
         extend: "text",
@@ -37,10 +35,10 @@ exports.default = (editor, opts) => {
             },
         }
     });
-    domc.addType(consts_1.slide.type, {
+    domc.addType(slide.type, {
         isComponent: (el) => {
             if (el.classList && el.classList.contains("slide__slide")) {
-                return { type: consts_1.slide.type };
+                return { type: slide.type };
             }
         },
         model: {
@@ -49,7 +47,7 @@ exports.default = (editor, opts) => {
                 editor.loadProjectData(editor.getProjectData());
             },
             defaults: {
-                name: consts_1.slide.name,
+                name: slide.name,
                 droppable: false,
                 draggable: "div.splide__list",
                 style: {
@@ -61,13 +59,13 @@ exports.default = (editor, opts) => {
                 },
                 components: [{
                         droppable: false,
-                        type: consts_1.image.type,
+                        type: image.type,
                         attributes: {
                             class: "slide_image"
                         }
                     }, {
                         droppable: false,
-                        type: consts_1.text.type,
+                        type: text.type,
                         attributes: {
                             class: "slide_text"
                         }
@@ -75,16 +73,16 @@ exports.default = (editor, opts) => {
             },
         },
     });
-    domc.addType(consts_1.carousel.type, {
+    domc.addType(carousel.type, {
         isComponent: (el) => {
             if (el.classList && el.classList.contains("splide")) {
                 // console.log(el.classList.contains("splide"))
-                return { type: consts_1.carousel.type };
+                return { type: carousel.type };
             }
         },
         model: {
             defaults: {
-                name: consts_1.carousel.name,
+                name: carousel.name,
                 attributes: {
                     "class": "splide",
                     "aria-label": "Splide Basic HTML Example",
@@ -103,13 +101,13 @@ exports.default = (editor, opts) => {
                                 droppable: "div.splide__slide",
                                 components: [
                                     {
-                                        type: consts_1.slide.type,
+                                        type: slide.type,
                                     },
                                     {
-                                        type: consts_1.slide.type,
+                                        type: slide.type,
                                     },
                                     {
-                                        type: consts_1.slide.type,
+                                        type: slide.type,
                                     }
                                 ]
                             }]

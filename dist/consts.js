@@ -1,22 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.text = exports.image = exports.slide = exports.carousel = void 0;
-exports.carousel = {
+export const carousel = {
     type: 'carousel',
     name: 'Carousel',
     label: 'Carousel',
 };
-exports.slide = {
+export const slide = {
     type: 'slide',
     name: 'Slide',
     label: 'Slide',
 };
-exports.image = {
+export const image = {
     type: 'slideImage',
     name: 'SlideImage',
     label: 'SlideImage',
 };
-exports.text = {
+export const text = {
     type: 'slideText',
     name: 'SlideText',
     label: 'SlideText',
