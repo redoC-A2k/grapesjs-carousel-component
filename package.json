@@ -1,0 +1,26 @@
+{
+  "name": "grapesjs-carousel-component",
+  "version": "1.0.0",
+  "description": "Carousel plugin for grapesjs which allows adding and removing slides dynamically",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redoC-A2k/grapesjs-carousel-component.git"
+  },
+  "keywords": [
+    "grapesjs",
+    "carousel",
+    "plugin",
+    "splidejs",
+    "dynamic"
+  ],
+  "author": "Afshan Ahmed Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redoC-A2k/grapesjs-carousel-component/issues"
+  },
+  "homepage": "https://github.com/redoC-A2k/grapesjs-carousel-component#readme"
+}
