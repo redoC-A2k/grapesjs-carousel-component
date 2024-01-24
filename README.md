@@ -101,6 +101,15 @@ Directly in the browser
         /* options */
       },
     },
+    // very important to add below scripts to editor canvas
+    canvas: {
+      scripts: [
+        "https://cdn.jsdelivr.net/npm/@redoc_a2k/splide@4.1.4/dist/js/splide.min.js",
+      ],
+      styles: [
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
+      ],
+    },
   });
 </script>
 ```
@@ -123,6 +132,15 @@ const editor = grapesjs.init({
   plugins: [
     editor => plugin(editor, { /* options */ }),
   ],
+  // very important to add below scripts to editor canvas
+  canvas: {
+    scripts: [
+      "https://cdn.jsdelivr.net/npm/@redoc_a2k/splide@4.1.4/dist/js/splide.min.js",
+    ],
+    styles: [
+      "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
+    ],
+  },
 });
 ```
 
