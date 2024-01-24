@@ -1,20 +1,21 @@
-export const carousel = {
+export var carousel = {
     type: 'carousel',
     name: 'Carousel',
     label: 'Carousel',
 };
-export const slide = {
+export var slide = {
     type: 'slide',
     name: 'Slide',
     label: 'Slide',
 };
-export const image = {
+export var image = {
     type: 'slideImage',
     name: 'SlideImage',
     label: 'SlideImage',
 };
-export const text = {
+export var text = {
     type: 'slideText',
     name: 'SlideText',
     label: 'SlideText',
 };
+//# sourceMappingURL=consts.js.map

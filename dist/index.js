@@ -1,13 +1,13 @@
-import loadBlocks from './blocks.js';
-import loadComponents from './components.js';
-export const CarouselPlugin = (editor, opts) => {
+import loadBlocks from './blocks';
+import loadComponents from './components';
+var CarouselPlugin = function (editor, opts) {
     // const options = {
     //     // Default options
     //     type:'section',
     //     name:'Carousel',
     //     label:'Carousel',
     // };
-    const options = {};
+    var options = {};
     // Load defaults
     // for (let name in options) {
     //     if (!(name in opts))
@@ -18,3 +18,5 @@ export const CarouselPlugin = (editor, opts) => {
     // Add blocks
     loadBlocks(editor, opts);
 };
+export default CarouselPlugin;
+//# sourceMappingURL=index.js.map

@@ -1,10 +1,11 @@
-import { carousel, image, slide, text } from "./consts.js";
+import { carousel, image, slide, text } from "./consts";
 // import { Splide } from "@splidejs/splide/dist/types/index.d.ts";
 // import Splide from '@splidejs/splide';
-export default (editor, opts) => {
-    const domc = editor.DomComponents;
+export default (function (editor, opts) {
+    var _a, _b;
+    var domc = editor.DomComponents;
     domc.addType(image.type, {
-        isComponent: (el) => {
+        isComponent: function (el) {
             if (el.classList && el.classList.contains("slide_image")) {
                 return { type: image.type };
             }
@@ -22,7 +23,7 @@ export default (editor, opts) => {
         }
     });
     domc.addType(text.type, {
-        isComponent: (el) => {
+        isComponent: function (el) {
             if (el.classList && el.classList.contains("slide_text")) {
                 return { type: text.type };
             }
@@ -36,13 +37,13 @@ export default (editor, opts) => {
         }
     });
     domc.addType(slide.type, {
-        isComponent: (el) => {
+        isComponent: function (el) {
             if (el.classList && el.classList.contains("slide__slide")) {
                 return { type: slide.type };
             }
         },
         model: {
-            removed() {
+            removed: function () {
                 // editor.Canvas.getFrameEl().src = editor.Canvas.getFrameEl().src;
                 editor.loadProjectData(editor.getProjectData());
             },
@@ -50,10 +51,10 @@ export default (editor, opts) => {
                 name: slide.name,
                 droppable: false,
                 draggable: "div.splide__list",
-                style: {
-                    ["min-height"]: '30px',
-                    ["min-width"]: '100%',
-                },
+                style: (_a = {},
+                    _a["min-height"] = '30px',
+                    _a["min-width"] = '100%',
+                    _a),
                 attributes: {
                     "class": "splide__slide",
                 },
@@ -74,7 +75,7 @@ export default (editor, opts) => {
         },
     });
     domc.addType(carousel.type, {
-        isComponent: (el) => {
+        isComponent: function (el) {
             if (el.classList && el.classList.contains("splide")) {
                 // console.log(el.classList.contains("splide"))
                 return { type: carousel.type };
@@ -114,12 +115,12 @@ export default (editor, opts) => {
                     }],
                 script: function () {
                     // @ts-ignore
-                    let el = this;
-                    let id = el.id;
+                    var el = this;
+                    var id = el.id;
                     console.log(this);
                     try {
                         // @ts-ignore
-                        let splide = new Splide(el, {
+                        var splide = new Splide(el, {
                             padding: {
                                 left: "15%",
                                 right: "15%",
@@ -132,14 +133,15 @@ export default (editor, opts) => {
                         console.log(error);
                     }
                 },
-                style: {
-                    ["min-height"]: '30px',
-                    ["min-width"]: '100%',
-                },
+                style: (_b = {},
+                    _b["min-height"] = '30px',
+                    _b["min-width"] = '100%',
+                    _b),
             },
-            init() {
+            init: function () {
                 console.log("init carousel");
             }
         },
     });
-};
+});
+//# sourceMappingURL=components.js.map

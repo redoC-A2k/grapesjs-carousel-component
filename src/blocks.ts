@@ -1,6 +1,6 @@
 import { Editor } from "grapesjs";
 import { carousel, slide } from "./consts";
-import { PluginOptions } from "./index";
+import { PluginOptions } from ".";
 
 export default (editor:Editor, opts:PluginOptions) => {
     const bm = editor.BlockManager;
