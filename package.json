@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-carousel-component",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Grapesjs Carousel Component",
   "main": "dist/index.js",
   "repository": {
